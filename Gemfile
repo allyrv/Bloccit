@@ -7,16 +7,14 @@ end
  
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
- 
-# #1
+
 group :production do
    	# Use pg as the production database for Active Record
    	gem 'pg'
 	gem 'rails_12factor'
 end
  
- 	# #2
-	group :development do
+group :development do
 	# Use sqlite3 as the development database for Active Record
 	gem 'sqlite3'
 end
@@ -36,17 +34,16 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
  
 gem 'thor', '0.20.0'
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
  
 group :development do
 	gem 'listen', '~> 3.0.5'
+end
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
 	gem 'rails-controller-testing'
 	gem 'shoulda' 
-end
-
-gem 'bootstrap-sass'
-gem 'autoprefixer-rails'
-
 end
