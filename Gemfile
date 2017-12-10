@@ -37,6 +37,7 @@ gem 'thor', '0.20.0'
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'bcrypt'
  
 group :development do
 	gem 'listen', '~> 3.0.5'
