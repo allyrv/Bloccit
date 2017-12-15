@@ -46,6 +46,14 @@ admin = User.create!(
 	role: 'admin' 
 )
 
+#Create a moderator user
+moderator = User.create!(
+	name: 'Moderator User',
+	email: 'moderator@example.com',
+	password: 'helloword',
+	role: 'moderator' 
+)
+
 #Create a member
 member = User.create!(
 	name: 'Member User',

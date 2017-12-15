@@ -26,11 +26,11 @@ class TopicsController < ApplicationController
     end
    end
 
-   def edit
+  def edit
     @topic = Topic.find(params[:id])
-   end
+  end
 
-   def update
+  def update
     @topic = Topic.find(params[:id])
     @topic.assign_attributes(topic_params)
 
@@ -61,8 +61,8 @@ class TopicsController < ApplicationController
   end
 
   def authorize_user
-    unless current_user.admin?
-      flash[:alert] = "You must be an admin to do that."
+    unless current_user.admin? || current_user.moderator?
+      flash[:alert] = "You must be an admin or moderator to do that."
       redirect_to topics_path
     end
   end
